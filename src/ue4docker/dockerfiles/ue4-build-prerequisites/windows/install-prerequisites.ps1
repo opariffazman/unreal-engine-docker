@@ -54,7 +54,7 @@ Invoke-WebRequest -Uri "https://sdk.lunarg.com/sdk/download/latest/windows/vulka
 Expand-Archive -Path "$env:TEMP\vulkan-runtime-components.zip" -DestinationPath "$env:TEMP"
 Copy-Item -Path "*\x64\vulkan-1.dll" -Destination C:\Windows\System32\
 
-$visual_studio_build = $args[0]
+$visual_studio_build = "17"
 
 # Use the latest available Windows SDK. The motivation behind this is:
 # 1. Newer SDKs allow developers to use newer APIs. Developers can guard that API usage with runtime version checks if they want to continue to support older Windows releases.
